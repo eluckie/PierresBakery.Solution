@@ -21,5 +21,13 @@ namespace PierresBakery.Tests
       int result = pastryOrder.PastryCount;
       Assert.AreEqual(pastryCount, result);
     }
+
+    [TestMethod]
+    public void CalculateTotal_Returns2IfOrdering1Pastry_Int()
+    {
+      Pastry pastryOrder = new Pastry(1);
+      int pastryTotal = pastryOrder.CalculateTotal();
+      Assert.AreEqual(2, pastryTotal);
+    }
   }
 }
