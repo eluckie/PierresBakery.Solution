@@ -13,7 +13,7 @@ namespace PierresBakery
       Console.WriteLine("We sell both pastries & bread and have some amazing sales going on!");
       Console.WriteLine("PASTRIES - $2 per pastry or Buy 3, Get 1 free");
       Console.WriteLine("BREAD - $5 per loaf or Buy 2, Get 1 free");
-      Console.WriteLine("------------------------------------------------------------------");
+      Console.WriteLine("---------------------------------------------------------------------");
       Console.WriteLine("Please enter how many pastries you'd like:");
       string pastryQtyString = Console.ReadLine();  
       Console.WriteLine("Please enter how many loaves of bread you'd like:");
@@ -29,7 +29,7 @@ namespace PierresBakery
       Console.WriteLine("Please confirm that you entered your order correctly:");
       Console.WriteLine($"You've chosen {pastryOrder.PastryCount} pastries");
       Console.WriteLine($"and {breadOrder.BreadCount} loaves of bread");
-      Console.WriteLine("Is this correct? Enter 'yes' to confirm, or enter any key to update your desired quantities");
+      Console.WriteLine("Is this correct? Enter 'yes' to confirm, or enter any key to update your quantities");
       string userInput = Console.ReadLine();  
       if (userInput.ToUpper() == "YES")
       {
@@ -56,7 +56,7 @@ namespace PierresBakery
       int pastryTotal = pastryOrder.CalculateTotal();
       int grandTotal = breadTotal + pastryTotal;
       Console.WriteLine("Calculating your total...");
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
+      Console.WriteLine("---------------------------------------------------------------------");
       Console.WriteLine("CONFIRMED");
       Console.WriteLine(pastryOrder.PastryCount + " pastries: $" + pastryTotal);
       Console.WriteLine(breadOrder.BreadCount+ " loaves of bread: $" + breadTotal);
@@ -70,6 +70,7 @@ namespace PierresBakery
       }
       else
       {
+        Console.WriteLine(GoodbyeBanner.Goodbye);
         Console.WriteLine("Thank you for your order");
         Console.WriteLine("Have the best day!");
       }
