@@ -1,4 +1,4 @@
-namespace ProgramName.UserInterfaceModels
+namespace PierresBakery.UserInterfaceModels
 {
   class WelcomeBanner
   {
