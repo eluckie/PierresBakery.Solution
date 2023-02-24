@@ -16,7 +16,7 @@
 
 This C# console application was created to demonstrate understanding of using TDD with C#, namespaces, classes, and auto-implemented properties. Once the application is ran via command in the computer's terminal, users are greeted by the bakery and displayed the prices of the baked goods available. Each baked good has the price for a singular item as well as sales for higher quantities. Pastries are buy 3 get 1 free, bread is buy 2 get 1 free. After reviewing the prices, users are prompted to enter their desired quantity of both pastries and bread. Once entered, the quantities are displayed back to the user to confirm. They're then able to confirm or reject the order.
 
-* If user **confirms** the quantities: their order is calculated and displayed back to them along with the quantity & cost of each baked good and their grand total
+* If user **confirms** the quantities: their order is calculated and displayed back to them. This includes the quantity & cost of each baked good and the grand total
 * If user **rejects** the quantities: they're prompted to re-enter their quantities & the confirmation process restarts
 
 Upon displaying their confirmed order and grand total, users are prompted to choose if they would like to create a new order or exit. Responding "yes" (case-insensitive) takes them back to the welcome message to create a new order. Pressing any other key exits the console application.
@@ -34,14 +34,10 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 ## Known Bugs
 
-* When entering just 1 loaf of bread or just 1 pastry, confirmation has grammatical errors
+* No known bugs.
 
 ## Stretch Plans
 
-* Welcome banner
-* Goodbye banner
-* Calculating animation
-* Use class inheritance to DRY up code for Bread and Pastry classes
 * Allow users to keep adding to their order
 * Allow users to order different types of Bread and Pastry
 
