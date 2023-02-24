@@ -11,13 +11,15 @@ namespace PierresBakery.Models
     }
     public int CalculateTotal()
     {
-      if(PastryCount == 4)
+      if(PastryCount % 4 == 0)
       {
-        return 6;
+        return ((PastryCount / 4) * 6);
       }
       else
       {
-        return PastryCount * 2;
+        int remainder = PastryCount % 4;
+        int adjustedCount = PastryCount - remainder;
+        return (remainder * 2) + ((adjustedCount / 4) * 6);
       }
     }
   }

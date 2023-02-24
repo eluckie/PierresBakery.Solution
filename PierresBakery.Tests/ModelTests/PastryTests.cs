@@ -45,5 +45,13 @@ namespace PierresBakery.Tests
       int pastryTotal = pastryOrder.CalculateTotal();
       Assert.AreEqual(6, pastryTotal);
     }
+
+    [TestMethod]
+    public void CalculateTotal_Returns12IfOrdering8Pastries_Int()
+    {
+      Pastry pastryOrder = new Pastry(8);
+      int pastryTotal = pastryOrder.CalculateTotal();
+      Assert.AreEqual(12, pastryTotal);
+    }
   }
 }
