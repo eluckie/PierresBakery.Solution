@@ -37,5 +37,13 @@ namespace PierresBakery.Tests
       int breadTotal = breadOrder.CalculateTotal();
       Assert.AreEqual(10, breadTotal);
     }
+
+    [TestMethod]
+    public void CalculateTotal_Returns10IfOrdering3Breads_Int()
+    {
+      Bread breadOrder = new Bread(3);
+      int breadTotal = breadOrder.CalculateTotal();
+      Assert.AreEqual(10, breadTotal);
+    }
   }
 }
