@@ -7,14 +7,10 @@ namespace PierresBakery.Tests
   public class BreadTests
   {
     [TestMethod]
-    public void NameOfMethodWeAreTesting_DescriptionOfBehavior_ExpectedReturnValue()
+    public void BreadConstructor_ShouldCreateAnInstanceOfBread_Bread()
     {
-      // Arrange
-
-      // Act
-      
-      // Assert 
-      Assert.AreEqual(ExpectedResult, CodeToTest);
+      Bread newBreadOrder = new Bread();
+      Assert.AreEqual(typeof(Bread), newBreadOrder.GetType());
     }
 
   }
