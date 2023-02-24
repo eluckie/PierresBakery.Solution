@@ -11,7 +11,7 @@ namespace PierresBakery.Models
     }
     public int CalculateTotal()
     {
-      return 2;
+      return PastryCount * 2;
     }
   }
 }
