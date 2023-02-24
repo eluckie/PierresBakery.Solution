@@ -8,7 +8,7 @@ namespace PierresBakery.Models
     {
       Quantity = quantity;
     }
-    public int CalculateTotal()
+    public override int CalculateTotal()
     {
       if(Quantity % 4 == 0)
       {
