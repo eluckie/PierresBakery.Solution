@@ -11,13 +11,15 @@ namespace PierresBakery.Models
     }
     public int CalculateTotal()
     {
-      if(BreadCount != 3)
+      if(BreadCount % 3 == 0)
       {
-        return BreadCount * 5;
+        return ((BreadCount / 3) * 10);
       }
       else
       {
-        return 10;
+        int remainder = BreadCount % 3;
+        int adjustedCount = BreadCount - remainder;
+        return (remainder * 5) + ((adjustedCount / 3) * 10);
       }
     }
   }
