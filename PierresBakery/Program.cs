@@ -27,8 +27,22 @@ namespace PierresBakery
     static void ConfirmOrEditOrder(Pastry pastryOrder, Bread breadOrder)
     {
       Console.WriteLine("Please confirm that you entered your order correctly:");
-      Console.WriteLine($"You've chosen {pastryOrder.PastryCount} pastries");
-      Console.WriteLine($"and {breadOrder.BreadCount} loaves of bread");
+      if(pastryOrder.Quantity == 1)
+      {
+        Console.WriteLine("You've chosen 1 pastry");
+      }
+      else
+      {
+        Console.WriteLine($"You've chosen {pastryOrder.Quantity} pastries");
+      }
+      if(breadOrder.Quantity == 1)
+      {
+        Console.WriteLine("and 1 loaf of bread");
+      }
+      else
+      {
+        Console.WriteLine($"and {breadOrder.Quantity} loaves of bread");
+      }
       Console.WriteLine("Is this correct? Enter 'yes' to confirm, or enter any key to update your quantities");
       string userInput = Console.ReadLine();  
       if (userInput.ToUpper() == "YES")
@@ -58,8 +72,22 @@ namespace PierresBakery
       Console.WriteLine("Calculating your total...");
       Console.WriteLine("---------------------------------------------------------------------");
       Console.WriteLine("CONFIRMED");
-      Console.WriteLine(pastryOrder.PastryCount + " pastries: $" + pastryTotal);
-      Console.WriteLine(breadOrder.BreadCount+ " loaves of bread: $" + breadTotal);
+      if(pastryOrder.Quantity == 1)
+      {
+        Console.WriteLine("1 pastry: $2");
+      }
+      else
+      {
+        Console.WriteLine(pastryOrder.Quantity + " pastries: $" + pastryTotal);
+      }
+      if(breadOrder.Quantity == 1)
+      {
+        Console.WriteLine("1 loaf of bread: $5");
+      }
+      else
+      {
+        Console.WriteLine(breadOrder.Quantity+ " loaves of bread: $" + breadTotal);
+      }
       Console.WriteLine("Your grand total is $" + grandTotal);
       Console.WriteLine("Would you like to place a new order?");
       Console.WriteLine("Please enter 'yes' to place a new order. To exit, enter any key.");

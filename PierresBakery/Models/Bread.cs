@@ -2,23 +2,22 @@ using System.Collections.Generic;
 
 namespace PierresBakery.Models
 {
-  public class Bread
+  public class Bread : BakedGoods
   {
-    public int BreadCount { get; }
     public Bread(int quantity)
     {
-      BreadCount = quantity;
+      Quantity = quantity;
     }
     public int CalculateTotal()
     {
-      if(BreadCount % 3 == 0)
+      if(Quantity % 3 == 0)
       {
-        return ((BreadCount / 3) * 10);
+        return ((Quantity / 3) * 10);
       }
       else
       {
-        int remainder = BreadCount % 3;
-        int adjustedCount = BreadCount - remainder;
+        int remainder = Quantity % 3;
+        int adjustedCount = Quantity - remainder;
         return (remainder * 5) + ((adjustedCount / 3) * 10);
       }
     }
