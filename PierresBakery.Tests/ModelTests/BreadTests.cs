@@ -22,5 +22,12 @@ namespace PierresBakery.Tests
       Assert.AreEqual(breadCount, result);
     }
 
+    [TestMethod]
+    public void CalculateTotal_Returns5IfOrdering1Bread_Int()
+    {
+      Bread breadOrder = new Bread(1);
+      int breadTotal = breadOrder.CalculateTotal();
+      Assert.AreEqual(5, breadTotal);
+    }
   }
 }

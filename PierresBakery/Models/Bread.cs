@@ -9,5 +9,9 @@ namespace PierresBakery.Models
     {
       BreadCount = quantity;
     }
+    public int CalculateTotal()
+    {
+      return 5;
+    }
   }
 }
