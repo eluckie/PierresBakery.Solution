@@ -1,5 +1,6 @@
 using System;
 using PierresBakery.Models;
+using PierresBakery.UserInterfaceModels;
 using System.Collections.Generic;
 
 namespace PierresBakery
@@ -8,8 +9,7 @@ namespace PierresBakery
   {
     static void Main()
     {
-      Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
-      Console.WriteLine("Welcome to Pierre's Bakery");
+      Console.WriteLine(WelcomeBanner.Welcome);
       Console.WriteLine("We sell both pastries & bread and have some amazing sales going on!");
       Console.WriteLine("PASTRIES - $2 per pastry or Buy 3, Get 1 free");
       Console.WriteLine("BREAD - $5 per loaf or Buy 2, Get 1 free");
@@ -58,8 +58,8 @@ namespace PierresBakery
       Console.WriteLine("Calculating your total...");
       Console.WriteLine("*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~**~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*");
       Console.WriteLine("CONFIRMED");
-      Console.WriteLine(pastryOrder.PastryCount + " pastries cost $" + pastryTotal);
-      Console.WriteLine(breadOrder.BreadCount+ " loaves of bread cost $" + breadTotal);
+      Console.WriteLine(pastryOrder.PastryCount + " pastries: $" + pastryTotal);
+      Console.WriteLine(breadOrder.BreadCount+ " loaves of bread: $" + breadTotal);
       Console.WriteLine("Your grand total is $" + grandTotal);
       Console.WriteLine("Would you like to place a new order?");
       Console.WriteLine("Please enter 'yes' to place a new order. To exit, enter any key.");
