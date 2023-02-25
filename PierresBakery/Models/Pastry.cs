@@ -20,6 +20,7 @@ namespace PierresBakery.Models
         int adjustedCount = Quantity - remainder;
         return (remainder * 2) + ((adjustedCount / 4) * 6);
       }
+      // fullOrder["Pastries"] = $"{Quantity}";
     }
   }
 }

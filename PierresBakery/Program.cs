@@ -12,15 +12,15 @@ namespace PierresBakery
       Console.WriteLine(WelcomeBanner.Welcome);
       Console.WriteLine("We sell both pastries & bread and have some amazing sales going on!");
       Console.WriteLine("---------------------------------------------------------------------");
-      Console.WriteLine("PASTRIES - $2 per pastry or Buy 3, Get 1 free");
-      Console.WriteLine("BREAD - $5 per loaf or Buy 2, Get 1 free");
+      Console.WriteLine("PASTRIES\n$2 per pastry or Buy 3, Get 1 free\n");
+      Console.WriteLine("BREAD\n$5 per loaf or Buy 2, Get 1 free");
       Console.WriteLine("---------------------------------------------------------------------");
       Console.WriteLine("Would you like to place an order?");
-      Console.WriteLine("Enter 'y' for yes or 'n' for no");
+      Console.WriteLine("Enter 'y' for yes or press any key to exit");
       string placeOrder = Console.ReadLine();
       if(placeOrder.ToUpper() == "Y")
       {
-      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       Console.WriteLine("Please enter how many pastries you'd like:");
       string pastryQtyString = Console.ReadLine();  
       Console.WriteLine("Please enter how many loaves of bread you'd like:");
@@ -82,10 +82,11 @@ namespace PierresBakery
     {
       int breadTotal = breadOrder.CalculateTotal();
       int pastryTotal = pastryOrder.CalculateTotal();
-      int grandTotal = breadTotal + pastryTotal;
+      int orderTotal = breadTotal + pastryTotal;
       Console.WriteLine("Calculating your total...");
       Console.WriteLine("CONFIRMED");
-      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+      // Console.WriteLine("This order has been added to your cart!");
+      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       if(pastryOrder.Quantity == 1)
       {
         Console.WriteLine("1 pastry: $2");
@@ -102,12 +103,18 @@ namespace PierresBakery
       {
         Console.WriteLine(breadOrder.Quantity+ " loaves of bread: $" + breadTotal);
       }
-      Console.WriteLine("Your grand total is $" + grandTotal);
+      Console.WriteLine("Your order total is $" + orderTotal);
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      Console.WriteLine("Would you like to place a new order?");
-      Console.WriteLine("Please enter 'yes' to place a new order. To exit, enter any key.");
-      string userResponse = Console.ReadLine(); 
-      if (userResponse.ToUpper() == "YES")
+      // Console.WriteLine("If you would like to view your cart total, enter 'c'");
+      Console.WriteLine("If you would like to add another order, enter 'n'");
+      Console.WriteLine("To exit, enter any other key.");
+      string userResponse = Console.ReadLine();
+      // if (userResponse.ToUpper() == "C")
+      // {
+        
+      // }
+      // else
+      if (userResponse.ToUpper() == "N")
       {
         Main();
       }
