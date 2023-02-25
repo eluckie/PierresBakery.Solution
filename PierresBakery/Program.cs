@@ -85,7 +85,6 @@ namespace PierresBakery
       int orderTotal = breadTotal + pastryTotal;
       Console.WriteLine("Calculating your total...");
       Console.WriteLine("CONFIRMED");
-      // Console.WriteLine("This order has been added to your cart!");
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
       if(pastryOrder.Quantity == 1)
       {
@@ -105,15 +104,9 @@ namespace PierresBakery
       }
       Console.WriteLine("Your order total is $" + orderTotal);
       Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      // Console.WriteLine("If you would like to view your cart total, enter 'c'");
       Console.WriteLine("If you would like to add another order, enter 'yes'");
       Console.WriteLine("To exit, enter any other key.");
       string userResponse = Console.ReadLine();
-      // if (userResponse.ToUpper() == "C")
-      // {
-        
-      // }
-      // else
       if (userResponse.ToUpper() == "YES")
       {
         Main();
