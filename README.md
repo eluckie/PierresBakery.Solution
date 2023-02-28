@@ -47,4 +47,4 @@ Upon displaying their confirmed order and grand total, users are prompted to cho
 
 MIT License
 
-Copyright (c) 2023 Elizabeth Luckie
+Copyright (c) 2023 Luckie
