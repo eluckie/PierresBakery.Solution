@@ -20,16 +20,16 @@ namespace PierresBakery
       string placeOrder = Console.ReadLine();
       if(placeOrder.ToUpper() == "Y")
       {
-      Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-      Console.WriteLine("Please enter how many pastries you'd like:");
-      string pastryQtyString = Console.ReadLine();  
-      Console.WriteLine("Please enter how many loaves of bread you'd like:");
-      string breadQtyString = Console.ReadLine();  
-      int pastryCount = int.Parse(pastryQtyString);  
-      int breadCount = int.Parse(breadQtyString);  
-      Pastry pastryOrder = new Pastry(pastryCount);
-      Bread breadOrder = new Bread(breadCount);
-      ConfirmOrEditOrder(pastryOrder, breadOrder);
+        Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        Console.WriteLine("Please enter how many pastries you'd like:");
+        string pastryQtyString = Console.ReadLine();  
+        Console.WriteLine("Please enter how many loaves of bread you'd like:");
+        string breadQtyString = Console.ReadLine();  
+        int pastryCount = int.Parse(pastryQtyString);  
+        int breadCount = int.Parse(breadQtyString);  
+        Pastry pastryOrder = new Pastry(pastryCount);
+        Bread breadOrder = new Bread(breadCount);
+        ConfirmOrEditOrder(pastryOrder, breadOrder);
       }
       else
       {
