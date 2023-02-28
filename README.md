@@ -30,6 +30,10 @@ Upon displaying their confirmed order and grand total, users are prompted to cho
 * Since this is a console application, you'll interact with it through text commands in your terminal
 4. Optionally, you can run ``dotnet build`` to compile this console app without running it
 
+1. Using a shell program, navigate to the directory called **PierresBakery.Tests**
+2. Once in the **PierresBakery.Tests** directory, run the command ``dotnet restore`` in the console
+3. After the restore process is complete, run the command ``dotnet test`` in the console. This will run all written tests and display the test results in the console to review
+
 ## Known Bugs
 
 * No known bugs.

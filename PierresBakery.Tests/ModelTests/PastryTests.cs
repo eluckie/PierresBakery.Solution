@@ -18,7 +18,7 @@ namespace PierresBakery.Tests
     {
       int pastryCount = 3;
       Pastry pastryOrder = new Pastry(3);
-      int result = pastryOrder.PastryCount;
+      int result = pastryOrder.Quantity;
       Assert.AreEqual(pastryCount, result);
     }
 
